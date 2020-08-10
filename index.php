@@ -1,3 +1,4 @@
+<h1>Hash decode</h1>
 <form action="index.php" method="post">
   <p>
     <label for="hash">
@@ -18,21 +19,20 @@
   </p>
 </form>
 
-Challenge result
+<h3>Challenge result</h3>
 <div id="result">
-  <?=
-    isset($_POST['challenge'])&&isset($_POST['hash'])
-    ? password_verify($_POST['challenge'], $_POST['hash'])
-      ? 'Yes!It matches the hash value! <br> Hash is '. $_POST['challenge']
-      : 'It didn\'t match the hash value.'
-    : 'No data'
-  ?>
+  <p>
+    <?=
+      isset($_POST['challenge'])&&isset($_POST['hash'])
+      ? password_verify($_POST['challenge'], $_POST['hash'])
+        ? 'Yes!It matches the hash value!<br>Hash is '. $_POST['challenge']
+        : 'It didn\'t match the hash value.'
+      : 'No data'
+    ?>
+  </p>
 </div>
 
-<br>
-<br>
-<br>
-Hash encode test
+<h1>Hash encode</h1>
 <form action="index.php" method="post">
   <p>
     <label for="test">
@@ -46,7 +46,7 @@ Hash encode test
   </p>
 </form>
 
-Hash encode result
+<h3>Hash encode result</h3>
 <div id="test-result">
   <?=
     $_POST['test']
