@@ -1,15 +1,13 @@
-<h1>Hash decode</h1>
+<h1>Hash decode challenge</h1>
 <form action="index.php" method="post">
   <p>
     <label for="hash">
-      Hash value
-      <input type="text" name="hash" id="hash">
+      <input type="text" name="hash" placeholder="Hash value">
     </label>
   </p>
   <p>
     <label for="challenge">
-      Challenge value
-      <input type="text" name="challenge" id="challenge">
+      <input type="text" name="challenge" placeholder="Challenge value">
     </label>
   </p>
   <p>
@@ -20,7 +18,7 @@
 </form>
 
 <h3>Challenge result</h3>
-<div id="result">
+<div>
   <p>
     <?=
       isset($_POST['challenge'])&&isset($_POST['hash'])
@@ -35,22 +33,22 @@
 <h1>Hash encode</h1>
 <form action="index.php" method="post">
   <p>
-    <label for="test">
-      <input type="text" name="test" id="">
+    <label for="Ms.encode-chan">
+      <input type="text" name="Ms.encode-chan" placeholder="Encode characters">
     </label>
   </p>
   <p>
-    <label for="test-encode">
-      <input type="submit" value="Hash encode!">
+    <label for="Mr.encode">
+      <input type="submit" name="Mr.encode" value="Hash encode!">
     </label>
   </p>
 </form>
 
 <h3>Hash encode result</h3>
-<div id="test-result">
+<div>
   <?=
-    $_POST['test']
-    ? password_hash($_POST['test'], PASSWORD_DEFAULT)
+    $_POST['Ms_encode-chan']
+    ? password_hash($_POST['Ms_encode-chan'], PASSWORD_DEFAULT)
     : 'No data'
   ?>
 </div>
